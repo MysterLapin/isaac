@@ -159,7 +159,7 @@ public class Room
 		return hero;
 	}
 
-	protected ArrayList<Door> getDoors() {
+	public ArrayList<Door> getDoors() {
 		return doors;
 	}
 	

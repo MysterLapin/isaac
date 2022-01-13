@@ -2,7 +2,8 @@ package gameWorld;
 
 import java.util.ArrayList;
 
-import gameobjects.Hero;
+import gameWorld.Caves.Room;
+import gameobjects.moving_entity.Hero;
 import libraries.StdDraw;
 import libraries.Vector2;
 import resources.ImagePaths;
@@ -49,7 +50,7 @@ public class drawingtest extends Room {
 			StdDraw.picture(door.getCoordonnees().getX(), door.getCoordonnees().getY(), ImagePaths.OPENED_DOOR);
 		}*/
 
-		hero.drawGameObject();
+		getHero().drawGameObject();
 	}
 	
 

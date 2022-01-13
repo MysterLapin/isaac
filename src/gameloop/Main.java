@@ -1,5 +1,6 @@
 package gameloop;
 
+import Dungeon.Dungeon;
 import gameWorld.GameWorld;
 import gameobjects.moving_entity.Hero;
 import libraries.StdDraw;
@@ -15,7 +16,9 @@ public class Main
 	{
 		// Hero, world and display initialisation.
 		Hero isaac = new Hero(RoomInfos.POSITION_CENTER_OF_ROOM, HeroInfos.ISAAC_SIZE, HeroInfos.ISAAC_SPEED,6,1,ImagePaths.ISAAC);
-		GameWorld world = new GameWorld(isaac);				
+		GameWorld world = new GameWorld(isaac);	
+		Dungeon monde = new Dungeon(isaac, 5);
+		monde.initalise();
 		initializeDisplay();
 
 		// Main loop of the game

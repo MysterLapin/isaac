@@ -1,6 +1,9 @@
 package gameWorld;
 
-import gameobjects.Hero;
+import gameWorld.Caves.Room;
+import gameWorld.Caves.Spawn;
+import gameobjects.Door;
+import gameobjects.moving_entity.*;
 import libraries.StdDraw;
 import libraries.Vector2;
 import resources.Controls;
@@ -50,7 +53,7 @@ public class GameWorld
 	public void nextDoor() {
 		double hx = (double)Math.round(hero.getPosition().getX()*10)/10;
 		double hy = (double)Math.round(hero.getPosition().getY()*10)/10;	
-		for (Door door : currentRoom.getDoor()) {
+		for (Door door : currentRoom.getDoors()) {
 			double dx = (double)Math.round(door.getCoordonnees().getX()*10)/10;
 			double dy = (double)Math.round(door.getCoordonnees().getY()*10)/10;
 			if (hx == dx && hy == dy) {
